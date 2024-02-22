@@ -11,6 +11,9 @@ extension Color {
     static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
 }
 
+let days: [String] = ["Monday", "Tuesday", "Wednesday"]
+let hours: [String] = ["Now", "2 PM", "3 PM", "4 PM", "5 PM"]
+
 struct ContentView: View {
     
     @State private var backCol: Color
@@ -18,8 +21,6 @@ struct ContentView: View {
         self.backCol = backCol
     }
     
-    let days: [String] = ["Monday", "Tuesday", "Wednesday"]
-    let hours: [String] = ["Now", "2 PM", "3 PM", "4 PM"]
 
     
     var body: some View {
@@ -42,37 +43,7 @@ struct ContentView: View {
                 }
                 
 //                Main Weather
-                RoundedRectangle(cornerSize: CGSize(width: 10, height: 10) )
-                    .fill(Color.offWhite)
-                    .frame(width: .infinity, height: 220)
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                    .overlay(
-                        VStack{
-                            HStack {
-                                VStack(alignment: .center){
-                                    Text("Tijuana").font(.system(size: 34))
-                                    Circle()
-                                        .fill(Color.offWhite)
-                                                       .frame(width: 100, height: 100)
-                                                       .overlay(Image(systemName: "sun.min.fill").resizable()
-                                                        .foregroundColor(.orange)
-                                                        .padding(14))
-                                                       .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                                                       .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                                }
-                                Spacer()
-                                VStack {
-                                    Text("14°")
-                                        .font(.system(size: 98))
-                                        
-                                    Text("Sunny day").fontWeight(.light)
-                                }.padding()
-                                
-                            }
-                            .padding()
-                        }
-                )
+                MainWeatherCard()
                 
 
                 Spacer(minLength: 4)
@@ -92,32 +63,7 @@ struct ContentView: View {
                 }
                 
                 //Hours weather
-                HStack {
-                    ForEach(hours, id: \.self) {
-                        hour in  RoundedRectangle(
-                            cornerSize: CGSize(width: 10, height: 10) )
-                            .fill(Color.offWhite)
-                            .frame(width: 80, height: 100)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                            .overlay(
-                                VStack {
-                                    Text(hour.description).font(.footnote)
-                                    Circle()
-                                        .fill(Color.offWhite)
-                                        .frame(width: 30, height: 30)
-                                        .overlay(Image(systemName: "sun.min.fill").resizable()
-                                            .foregroundColor(.orange)
-                                            .padding(2))
-                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                                    Text("34°").fontWeight(.bold).padding(0.5)
-
-                                }
-                                
-                            ).padding(3)
-                    }
-                }
+                HourlyForecastCard()
                 
                 Spacer(minLength: 20)
                 Divider()
@@ -133,42 +79,7 @@ struct ContentView: View {
                     }
                 }
                 
-                ForEach(days, id: \.self) {
-                    day in RoundedRectangle (cornerSize: CGSize(width: 10, height: 10) )
-                        .fill(Color.offWhite)
-                        .frame(width: .infinity, height: 50)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .overlay(
-                            VStack {
-                                HStack {
-                                    Text(day.description)
-                                        .padding()
-                                    Spacer()
-                                    Image(systemName: "drop.fill").resizable().scaledToFit().frame(width: 14.0, height: 14.0).clipped()
-                                
-                                    Text("7%").fontWeight(.light).font(.footnote)
-                                    Spacer()
-                                    Image(systemName: "sun.min.fill")
-                                        .resizable().scaledToFit()
-                                        .frame(width: 30, height: 30).clipped()
-                                        .foregroundStyle(Color.orange)
-                                    
-                                    Image(systemName: "cloud.heavyrain.fill")
-                                        .resizable().scaledToFit()
-                                        .frame(width: 30, height: 30).clipped()
-                                        .foregroundStyle(Color.blue)
-                                    Spacer()
-                                    Text("17°").fontWeight(.light).font(.footnote)
-                                    Text("7°").fontWeight(.light).font(.footnote)
-                                }.padding()
-                                
-                            }
-                            
-                        ).padding(3)
-                }
-                
-               
+                WeekForecastCard()
                 Spacer(minLength: 8)
             }
             .padding()

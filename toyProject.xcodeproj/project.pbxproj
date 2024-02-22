@@ -14,6 +14,9 @@
 		DB09B24E2B7444BF00B9E272 /* toyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09B24D2B7444BF00B9E272 /* toyProjectUITests.swift */; };
 		DB09B2502B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09B24F2B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift */; };
 		DB09B25C2B75747E00B9E272 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09B2342B7444B700B9E272 /* ContentView.swift */; };
+		DBA259E72B8665F90054C908 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E62B8665F90054C908 /* SwiftUIView.swift */; };
+		DBA259E92B86666D0054C908 /* HourlyForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */; };
+		DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DB09B2492B7444BF00B9E272 /* toyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09B24D2B7444BF00B9E272 /* toyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toyProjectUITests.swift; sourceTree = "<group>"; };
 		DB09B24F2B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBA259E62B8665F90054C908 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCard.swift; sourceTree = "<group>"; };
+		DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekForecastCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		DB09B2312B7444B700B9E272 /* toyProject */ = {
 			isa = PBXGroup;
 			children = (
+				DBA259E42B8425C10054C908 /* ViewModel */,
+				DBA259E32B8425B90054C908 /* View */,
+				DBA259E22B8425AF0054C908 /* Model */,
 				DB09B2322B7444B700B9E272 /* toyProjectApp.swift */,
 				DB09B2342B7444B700B9E272 /* ContentView.swift */,
 				DB09B2362B7444BE00B9E272 /* Assets.xcassets */,
@@ -125,6 +134,38 @@
 				DB09B24F2B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift */,
 			);
 			path = toyProjectUITests;
+			sourceTree = "<group>";
+		};
+		DBA259E22B8425AF0054C908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBA259E32B8425B90054C908 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBA259E52B8665D60054C908 /* Cards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBA259E42B8425C10054C908 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DBA259E52B8665D60054C908 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				DBA259E62B8665F90054C908 /* SwiftUIView.swift */,
+				DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */,
+				DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB09B25C2B75747E00B9E272 /* ContentView.swift in Sources */,
+				DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */,
 				DB09B2332B7444B700B9E272 /* toyProjectApp.swift in Sources */,
+				DBA259E72B8665F90054C908 /* SwiftUIView.swift in Sources */,
+				DBA259E92B86666D0054C908 /* HourlyForecastCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

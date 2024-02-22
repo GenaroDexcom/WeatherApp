@@ -43,7 +43,7 @@ struct ContentView: View {
                 }
                 
 //                Main Weather
-                MainWeatherCard()
+                MainWeatherCard(offWhite)
                 
 
                 Spacer(minLength: 4)

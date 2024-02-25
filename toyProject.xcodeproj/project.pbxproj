@@ -15,7 +15,7 @@
 		DB09B2502B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09B24F2B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift */; };
 		DB09B25C2B75747E00B9E272 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09B2342B7444B700B9E272 /* ContentView.swift */; };
 		DBA259E72B8665F90054C908 /* MainWeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E62B8665F90054C908 /* MainWeatherCard.swift */; };
-		DBA259E92B86666D0054C908 /* HourlyForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */; };
+		DBA259E92B86666D0054C908 /* HourlyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E82B86666D0054C908 /* HourlyCard.swift */; };
 		DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		DB09B22F2B7444B700B9E272 /* toyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09B2322B7444B700B9E272 /* toyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toyProjectApp.swift; sourceTree = "<group>"; };
-		DB09B2342B7444B700B9E272 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB09B2342B7444B700B9E272 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		DB09B2362B7444BE00B9E272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB09B2392B7444BE00B9E272 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB09B23F2B7444BE00B9E272 /* toyProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toyProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +48,7 @@
 		DB09B24D2B7444BF00B9E272 /* toyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toyProjectUITests.swift; sourceTree = "<group>"; };
 		DB09B24F2B7444BF00B9E272 /* toyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DBA259E62B8665F90054C908 /* MainWeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWeatherCard.swift; sourceTree = "<group>"; };
-		DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCard.swift; sourceTree = "<group>"; };
+		DBA259E82B86666D0054C908 /* HourlyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCard.swift; sourceTree = "<group>"; };
 		DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekForecastCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				DBA259E62B8665F90054C908 /* MainWeatherCard.swift */,
-				DBA259E82B86666D0054C908 /* HourlyForecastCard.swift */,
+				DBA259E82B86666D0054C908 /* HourlyCard.swift */,
 				DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */,
 			);
 			path = Cards;
@@ -302,7 +302,7 @@
 				DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */,
 				DB09B2332B7444B700B9E272 /* toyProjectApp.swift in Sources */,
 				DBA259E72B8665F90054C908 /* MainWeatherCard.swift in Sources */,
-				DBA259E92B86666D0054C908 /* HourlyForecastCard.swift in Sources */,
+				DBA259E92B86666D0054C908 /* HourlyCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

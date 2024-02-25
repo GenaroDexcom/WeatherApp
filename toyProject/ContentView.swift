@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
-}
-
 let days: [String] = ["Monday", "Tuesday", "Wednesday"]
 let hours: [String] = ["Now", "2 PM", "3 PM", "4 PM", "5 PM"]
 
@@ -20,77 +16,53 @@ struct ContentView: View {
     init(backCol: Color) {
         self.backCol = backCol
     }
-    
-
-    
     var body: some View {
         ZStack {
             Color.offWhite
-            VStack {
-                Spacer(minLength: 30)
+            VStack(alignment: .leading, spacing: 8 ) {
+                Text("Weather UI App")
+                    .font(.largeTitle)
+                    .padding(.trailing, 8)
+                Text("Alerts Data")
+                    .font(.subheadline)
+                MainWeatherCard()
+                
+                Divider()
+                
+                Text("Hourly Forecast")
+                    .font(.title3)
+                    .multilineTextAlignment(.leading)
+                
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(alignment: .center) {
+                        ForEach(hours, id: \.self) { hour in
+                            HourlyCard(hour: hour)
+                        }
+                    }.frame(height: UIScreen.main.bounds.size.height*0.18)
+                }.frame(width: .infinity).background(Color.offWhite)
+                Divider()
                 HStack {
+                    Text("7 day Forecast")
+                        .font(.title3)
+//                    Spacer()
                     
-                    Text("Weather UI App")
-                        .font(.largeTitle)
-                        .padding(.trailing, 8)
-                    Spacer()
-                }
-                HStack {
-                    Text("Alerts Data")
-                        .font(.subheadline)
-                        .padding(.horizontal)
-                    Spacer()
-                }
-                
-//                Main Weather
-                MainWeatherCard(offWhite)
-                
-
-                Spacer(minLength: 4)
-                
-                Divider()
-                
-                Spacer(minLength: 10)
-                
-                VStack {
-                    HStack {
-                        
-                        Text("Hourly Forecast")
-                            .font(.title3)
-                            .padding(.trailing, 8)
-                        Spacer()
+                }.padding(8)
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVStack(alignment: .center) {
+                        ForEach(days, id: \.self) { day in
+                            WeekForecastCard(day: day)
+                        }
                     }
                 }
-                
-                //Hours weather
-                HourlyForecastCard()
-                
-                Spacer(minLength: 20)
-                Divider()
-                
-                //Days weather
-                VStack {
-                    HStack {
-                        
-                        Text("7 day Forecast")
-                            .font(.title3)
-                            .padding(.trailing, 8)
-                        Spacer()
-                    }
-                }
-                
-                WeekForecastCard()
-                Spacer(minLength: 8)
-            }
-            .padding()
+            }.padding(EdgeInsets(top: 48, leading: 8, bottom: 8, trailing: 8))
         }
         .edgesIgnoringSafeArea(.all)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(backCol)
     }
-        
+    
 }
 
 #Preview {
-    ContentView(backCol: Color.white)
+    ContentView(backCol: Color.offWhite)
 }

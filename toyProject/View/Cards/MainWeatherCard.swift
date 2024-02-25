@@ -11,7 +11,7 @@ struct MainWeatherCard: View {
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 10, height: 10) )
             .fill(Color.offWhite)
-            .frame(width: .infinity, height: 220)
+            .frame(width: .infinity, height: 192)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             .overlay(
@@ -39,7 +39,8 @@ struct MainWeatherCard: View {
                     }
                     .padding()
                 }
-            )
+            ).padding()
+
     }
 }
 

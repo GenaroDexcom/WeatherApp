@@ -13,23 +13,17 @@ struct HourlyCard: View {
     
     var body: some View {
         RoundedRectangle(
-            cornerSize: CGSize(width: 10, height: 10) )
+            cornerSize: CGSize(width: 20, height: 20) )
         .fill(Color.offWhite)
         .frame(width: 80, height: 100)
-        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-        .shadow(color: Color.offWhite, radius: 10, x: -5, y: -5)
+        .shadow(color: Color.black.opacity(0.2), radius: 8, x: 10, y: 10)
+        .shadow(color: Color.offWhite, radius: 8, x: -5, y: -5)
+//        .blur(radius: 0.5)
         .overlay(
             VStack {
-                Text(hour).font(.footnote)
-                Circle()
-                    .fill(Color.offWhite)
-                    .frame(width: 30, height: 30)
-                    .overlay(Image(systemName: "sun.min.fill").resizable()
-                        .foregroundColor(.orange)
-                        .padding(2))
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                Text("34°").fontWeight(.bold).padding(0.5)
+                Text(hour).font(.footnote).padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+                NeuIcon(icon: "sun.min", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 40, expansion: 4)
+                Text("34°").fontWeight(.bold).padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
                 
             }
             
@@ -38,7 +32,7 @@ struct HourlyCard: View {
 }
 
 #Preview {
-    HourlyCard(hour: "12")
+    HourlyCard(hour: "4 pm")
 }
 
 

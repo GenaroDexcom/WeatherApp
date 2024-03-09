@@ -12,7 +12,7 @@ struct WeekForecastCard: View {
     let day : String
     
     var body: some View {
-        RoundedRectangle (cornerSize: CGSize(width: 10, height: 10) )
+        RoundedRectangle (cornerSize: CGSize(width: 16, height: 16) )
             .fill(Color.offWhite)
             .frame(width: .infinity, height: 50)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
@@ -24,7 +24,13 @@ struct WeekForecastCard: View {
                             .padding().frame(maxWidth: .infinity, alignment: .leading)
 
                         HStack() {
-                            Image(systemName: "drop.fill").resizable().scaledToFit().frame(width: 14.0, height: 14.0).clipped().gridColumnAlignment(.trailing)
+                            Image(systemName: "drop.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 14.0, height: 14.0)
+                                .clipped()
+                                .gridColumnAlignment(.trailing)
+                                .foregroundColor(.daBlue)
                             
                             Text("7%").fontWeight(.light).font(.footnote)
                         }
@@ -44,7 +50,7 @@ struct WeekForecastCard: View {
                             Text("7°").fontWeight(.light).font(.footnote)
                         }
                     }.padding()
-                }).padding(.vertical, 3)
+                })
     }
 }
 #Preview {

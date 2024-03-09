@@ -17,6 +17,10 @@
 		DBA259E72B8665F90054C908 /* MainWeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E62B8665F90054C908 /* MainWeatherCard.swift */; };
 		DBA259E92B86666D0054C908 /* HourlyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259E82B86666D0054C908 /* HourlyCard.swift */; };
 		DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */; };
+		DBC28FAE2B91229D00D048C3 /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC28FAD2B91229D00D048C3 /* DayDetailView.swift */; };
+		DBC28FB02B91318A00D048C3 /* MainDataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC28FAF2B91318A00D048C3 /* MainDataCard.swift */; };
+		DBC28FB22B97C81A00D048C3 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC28FB12B97C81A00D048C3 /* DetailCard.swift */; };
+		DBC28FB52B980D8B00D048C3 /* NeuIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC28FB42B980D8B00D048C3 /* NeuIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		DBA259E62B8665F90054C908 /* MainWeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWeatherCard.swift; sourceTree = "<group>"; };
 		DBA259E82B86666D0054C908 /* HourlyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCard.swift; sourceTree = "<group>"; };
 		DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekForecastCard.swift; sourceTree = "<group>"; };
+		DBC28FAD2B91229D00D048C3 /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
+		DBC28FAF2B91318A00D048C3 /* MainDataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataCard.swift; sourceTree = "<group>"; };
+		DBC28FB12B97C81A00D048C3 /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
+		DBC28FB42B980D8B00D048C3 /* NeuIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				DBA259E52B8665D60054C908 /* Cards */,
+				DBC28FAD2B91229D00D048C3 /* DayDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,11 +170,22 @@
 		DBA259E52B8665D60054C908 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				DBC28FB32B980D6C00D048C3 /* Elements */,
 				DBA259E62B8665F90054C908 /* MainWeatherCard.swift */,
 				DBA259E82B86666D0054C908 /* HourlyCard.swift */,
 				DBA259EA2B8680EC0054C908 /* WeekForecastCard.swift */,
+				DBC28FAF2B91318A00D048C3 /* MainDataCard.swift */,
+				DBC28FB12B97C81A00D048C3 /* DetailCard.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		DBC28FB32B980D6C00D048C3 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				DBC28FB42B980D8B00D048C3 /* NeuIcon.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,11 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC28FB22B97C81A00D048C3 /* DetailCard.swift in Sources */,
+				DBC28FAE2B91229D00D048C3 /* DayDetailView.swift in Sources */,
 				DB09B25C2B75747E00B9E272 /* ContentView.swift in Sources */,
+				DBC28FB02B91318A00D048C3 /* MainDataCard.swift in Sources */,
 				DBA259EB2B8680EC0054C908 /* WeekForecastCard.swift in Sources */,
 				DB09B2332B7444B700B9E272 /* toyProjectApp.swift in Sources */,
 				DBA259E72B8665F90054C908 /* MainWeatherCard.swift in Sources */,
 				DBA259E92B86666D0054C908 /* HourlyCard.swift in Sources */,
+				DBC28FB52B980D8B00D048C3 /* NeuIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,24 +9,17 @@ import SwiftUI
 
 struct MainWeatherCard: View {
     var body: some View {
-        RoundedRectangle(cornerSize: CGSize(width: 10, height: 10) )
+        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20) )
             .fill(Color.offWhite)
             .frame(width: .infinity, height: 192)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 10, y: 10)
+            .shadow(color: Color.white.opacity(0.7), radius: 20, x: -5, y: -5)
             .overlay(
                 VStack{
                     HStack {
                         VStack(alignment: .center){
                             Text("Tijuana").font(.system(size: 34))
-                            Circle()
-                                .fill(Color.offWhite)
-                                .frame(width: 100, height: 100)
-                                .overlay(Image(systemName: "sun.min.fill").resizable()
-                                    .foregroundColor(.orange)
-                                    .padding(14))
-                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            NeuIcon(icon: "sun.min.fill", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 96, expansion: 16)
                         }
                         Spacer()
                         VStack {

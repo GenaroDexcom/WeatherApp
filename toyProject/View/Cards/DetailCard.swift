@@ -37,5 +37,5 @@ struct DetailCard: View {
 }
 
 #Preview {
-    DetailCard(iconView: NeuIcon(icon: "sun.max.fill", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 40, expansion: 8) , factor: "Humidity", data: "87%", width: 176, height: 144)
+    DetailCard(iconView: NeuIcon(icon: "sun.max.fill", foreColor: .daOrange, backColor: .offWhite, size: 40, expansion: 8, action: {}) , factor: "Humidity", data: "87%", width: 176, height: 144)
 }

@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  toyProject
 //
-//  Created by Genaro Gonzalez on 07/02/24.
+//  Created by Genaro Gonzalez on 11/03/24.
 //
 
 import SwiftUI
@@ -10,24 +10,43 @@ import SwiftUI
 let days: [String] = ["Monday", "Tuesday", "Wednesday"]
 let hours: [String] = ["Now", "2 PM", "3 PM", "4 PM", "5 PM"]
 
-struct ContentView: View {
+struct HomeView: View {
+    var weather: ResponseBody
+    @StateObject var manager: LocationManager
+    @State var backCol: Color
+//    init(backCol: Color) {
+//        self.backCol = backCol
+//    }
     
-    @State private var backCol: Color
-    init(backCol: Color) {
-        self.backCol = backCol
-    }
+  
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.offWhite
                 VStack(alignment: .leading, spacing: 8 ) {
-                    Text("Weather UI App")
-                        .font(.largeTitle)
-                        .padding(.leading, 8)
-                    Text("Alerts Data")
-                        .font(.subheadline).padding(.leading, 16)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Weather UI App")
+                                .font(.largeTitle)
+                                .padding(.leading, 8)
+                            if let location = manager.location {
+                                Text("Longitude: \(location.longitude) Latitude: \(location.latitude)")
+                                    .font(.subheadline).padding(.leading, 16)
+                            }
+                            else {
+                                Text("Today \(Date().formatted(.dateTime.month().day().hour().minute()))")
+                                    .font(.subheadline).padding(.leading, 16)
+                            }
+                        }
+                        Spacer()
+                        NeuIcon(icon: "ellipsis.circle.fill", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {print("alo")}).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24))
+                            
+                    }
                     
-                    MainWeatherCard()
+                    
+                    
+                    MainWeatherCard(weather: weather).environmentObject(manager)
                     
                     Divider()
                     
@@ -65,9 +84,8 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
-    
 }
 
 #Preview {
-    ContentView(backCol: Color.offWhite)
+    HomeView(weather: previewWeather, manager: LocationManager.init(), backCol: Color.offWhite)
 }

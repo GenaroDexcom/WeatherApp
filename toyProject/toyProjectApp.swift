@@ -11,7 +11,7 @@ import SwiftUI
 struct toyProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(backCol: Color.white)
+            ContentView()
         }
     }
 }

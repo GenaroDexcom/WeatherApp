@@ -22,7 +22,7 @@ struct HourlyCard: View {
         .overlay(
             VStack {
                 Text(hour).font(.footnote).padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
-                NeuIcon(icon: "sun.min", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 40, expansion: 4)
+                NeuIcon(icon: "sun.min", foreColor: .daOrange, backColor: .offWhite, size: 40, expansion: 4, action: {})
                 Text("34°").fontWeight(.bold).padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
                 
             }

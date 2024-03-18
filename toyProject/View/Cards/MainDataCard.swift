@@ -21,7 +21,7 @@ struct MainDataCard: View {
                             Text("Monday 04")
                             Text("20° C").font(.largeTitle).padding(.trailing, 16)
                         }
-                        NeuIcon(icon: "cloud.drizzle", action: {}, foreColor: .daBlue, backColor: .offWhite, size: 100, expansion: 16)
+                        NeuIcon(icon: "cloud.drizzle", foreColor: .daBlue, backColor: .offWhite, size: 100, expansion: 16, action: {})
                         VStack(alignment: .leading) {
                             HStack {
                                 Image(systemName: "humidity.fill").foregroundColor(.daBlue)

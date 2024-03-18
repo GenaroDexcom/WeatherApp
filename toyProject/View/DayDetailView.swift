@@ -24,19 +24,19 @@ struct DayDetailView: View {
                         .padding().fixedSize(horizontal: false, vertical: true)
                     VStack {
                         HStack {
-                            DetailCard(iconView: NeuIcon(icon: "drop.circle", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8), factor: "Humidity", data: "88%", width: 176, height: 144)
+                            DetailCard(iconView: NeuIcon(icon: "drop.circle", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {}), factor: "Humidity", data: "88%", width: 176, height: 144)
                             Divider().colorInvert()
-                            DetailCard(iconView: NeuIcon(icon: "sun.max.circle", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8), factor: "UV Index", data: "0 (Low)", width: 176, height: 144)
+                            DetailCard(iconView: NeuIcon(icon: "sun.max.circle", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {}), factor: "UV Index", data: "0 (Low)", width: 176, height: 144)
                         }
                         Divider().colorInvert()
                         HStack {
-                            DetailCard(iconView: NeuIcon(icon: "sunrise.circle", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8), factor: "Sunrise", data: "3:44", width: 176, height: 144)
+                            DetailCard(iconView: NeuIcon(icon: "sunrise.circle", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {}), factor: "Sunrise", data: "3:44", width: 176, height: 144)
                             Divider().colorInvert()
-                            DetailCard(iconView: NeuIcon(icon: "sunset.circle", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8), factor: "Sunset", data: "13:41", width: 176, height: 144)
+                            DetailCard(iconView: NeuIcon(icon: "sunset.circle", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {}), factor: "Sunset", data: "13:41", width: 176, height: 144)
                         }
                         
                     }
-                    DetailCard(iconView: NeuIcon(icon: "moonphase.waning.crescent.inverse", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8), factor: "Waning Crescent", data: "", width: .infinity, height: 64).padding()
+                    DetailCard(iconView: NeuIcon(icon: "moonphase.waning.crescent.inverse", foreColor: .daOrange, backColor: .offWhite, size: 48, expansion: 8, action: {}), factor: "Waning Crescent", data: "", width: .infinity, height: 64).padding()
                 }
             }.scrollIndicators(.hidden).padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
         }.edgesIgnoringSafeArea(.all)

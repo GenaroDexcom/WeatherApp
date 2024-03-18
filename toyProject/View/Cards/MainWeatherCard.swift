@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainWeatherCard: View {
+    var weather: ResponseBody
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 20, height: 20) )
             .fill(Color.offWhite)
@@ -18,8 +19,8 @@ struct MainWeatherCard: View {
                 VStack{
                     HStack {
                         VStack(alignment: .center){
-                            Text("Tijuana").font(.system(size: 34))
-                            NeuIcon(icon: "sun.min.fill", action: {}, foreColor: .daOrange, backColor: .offWhite, size: 96, expansion: 16)
+                            Text(weather.name).font(.system(size: 34))
+                            NeuIcon(icon: "sun.min.fill", foreColor: .daOrange, backColor: .offWhite, size: 96, expansion: 8, action: {})
                         }
                         Spacer()
                         VStack {
@@ -39,5 +40,5 @@ struct MainWeatherCard: View {
 
 
 #Preview {
-    MainWeatherCard()
+    MainWeatherCard(weather: previewWeather)
 }

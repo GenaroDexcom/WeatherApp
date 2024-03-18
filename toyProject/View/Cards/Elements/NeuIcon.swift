@@ -10,11 +10,12 @@ import SwiftUI
 struct NeuIcon: View {
     
     let icon: String
-    var action : (() -> Void) = {}
     let foreColor : Color
     let backColor : Color
     let size : CGFloat
     let expansion : CGFloat
+    var action : (() -> Void) = {}
+
     
     var body: some View {
 //                    Circle()
@@ -39,5 +40,5 @@ struct NeuIcon: View {
 }
 
 #Preview {
-    NeuIcon(icon: "sun.max.fill", foreColor: .daOrange, backColor: .offWhite, size: 64, expansion: 16)
+    NeuIcon(icon: "sun.max.fill", foreColor: .daOrange, backColor: .offWhite, size: 64, expansion: 16, action: {})
 }
